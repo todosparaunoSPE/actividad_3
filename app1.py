@@ -30,6 +30,17 @@ background-size:16px 16px;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+
+# Crear el botón para descargar el archivo PDF
+st.sidebar.download_button(
+    label="Descargar PDF de Actividad 3", 
+    data=open("actividad_3.pdf", "rb").read(), 
+    file_name="actividad_3.pdf", 
+    mime="application/pdf"
+)
+
+
+
 # Sección de Ayuda
 st.sidebar.subheader("Ayuda")
 st.sidebar.write("""
